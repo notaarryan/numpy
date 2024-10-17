@@ -1,4 +1,5 @@
 import numpy as np
+import numpy.linalg as la
 
 # np.array returns a numpy array
 # numpy array can only store elements of same datatypes
@@ -88,3 +89,18 @@ print(a,end="\n\n")
 print(a[1,:],end="\n\n") #this means 1st row all columns
 print(a[:,1:3],end="\n\n")#this means all rows but columns 1 to 3(not including 3)
 
+# transpose function
+
+print(a.T,end="\n\n")
+
+print(la.inv(np.round(np.random.rand(4,4)*100)),end="\n\n")
+print(la.det((np.random.rand(4,4))),end="\n\n")
+
+# sorting rows and columns
+
+a = np.random.randint(0,100,50).reshape(2,5,5)
+print(a)
+a.sort(axis=0) #sorts all columns
+print(a,end="\n\n")
+a.sort(axis=1) #sorts all rows
+print(a,end="\n\n") 
