@@ -28,3 +28,12 @@ print(a,end="\n\n")
 #if size is specified it returns a np array
 a = np.random.randint(0,20)
 print(a,end="\n\n")
+
+# np.random.rand(n) returns n number of random values between 0 and 1
+a = (np.random.rand(10))
+print(a,end="\n\n")
+
+#np.randome(n,o,p,....) returns a 3D array with n 2D arrays and o 3D arrays each with p elements
+
+a = np.random.rand(2,3,4)
+print(a,end="\n\n")
