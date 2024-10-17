@@ -37,3 +37,14 @@ print(a,end="\n\n")
 
 a = np.random.rand(2,3,4)
 print(a,end="\n\n")
+
+a = np.random.rand(2,3,4,5,6)
+print(a,end="\n\n")
+
+# to convert it to a range we can multiply it with a number and using np.round() on it
+a = np.round((np.random.rand(10))*10) #returns numbers in range 0 to 10
+print(a,end="\n\n")
+
+# it generates samples from a standard normal distribution (mean = 0, standard deviation = 1). 
+a = np.random.randn(10)
+print(a,end="\n\n")
