@@ -72,3 +72,19 @@ print(b,end="\n\n")
 b[0] = 1000
 print(a,end="\n\n")
 
+#use .copy() function if you want to create a deep copy
+
+#np.argwhere returns a 2D array containing only 1 element which is the index where the arg is true
+index = np.argwhere(a == 1000) # will return [[3]]
+index = np.argwhere(a == 1000)[0][0] #will return 3
+print(index,end="\n\n")
+
+
+# if the array has more than one dimension then slicing is different
+a = np.round(np.random.rand(5,4)*10)
+print(a,end="\n\n")
+
+# for ndimension matrix slicing is like a[rows,columns]
+print(a[1,:],end="\n\n") #this means 1st row all columns
+print(a[:,1:3],end="\n\n")#this means all rows but columns 1 to 3(not including 3)
+
