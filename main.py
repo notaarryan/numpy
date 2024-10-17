@@ -48,3 +48,27 @@ print(a,end="\n\n")
 # it generates samples from a standard normal distribution (mean = 0, standard deviation = 1). 
 a = np.random.randn(10)
 print(a,end="\n\n")
+
+# np.zeros and np.ones creates a numpy array consisting of all elements 0 and 1 respectively
+a = np.zeros(10,"i")
+print(a,end="\n\n")
+a = np.ones(10,"i")
+print(a,end="\n\n")
+
+# np.reshape reshapes the array to sepcified rows and columns
+# the product of rows and columns have to be equal to the number of elements of the array
+
+a = np.arange(100).reshape(2,5,10)
+print(a,end="\n\n")
+
+
+# in numpy slicing an array does not return a copy it accesses the same memory location so if you change the slice the original array will also change also known as shallow copy
+# shallow copy is way faster and efficent than deep copies to acess data
+
+a = np.arange(0,50)
+b = a[3:10]
+print(b,end="\n\n")
+
+b[0] = 1000
+print(a,end="\n\n")
+
