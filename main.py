@@ -133,6 +133,18 @@ print(a[(a<80) | (a>50)],end="\n\n")
 
 
 #prints all values where elements are not greater than 80
-print(a[~(a>80)])
+print(a[~(a>80)],end="\n\n")
 
 # &, | and ~ are bitwise operators
+
+#numpy brodcasting
+a = np.random.rand(2,5,5)
+b = np.random.randint(0,50,50).reshape(2,5,5)
+#adds 5 to each element
+a = a+5
+print(a,end="\n\n")
+print(b,end="\n\n")
+
+# can add numpy arrays if they have the same shape(dimensions)
+b = b+a
+print(b,end="\n\n")
