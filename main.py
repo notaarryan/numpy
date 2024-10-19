@@ -148,3 +148,26 @@ print(b,end="\n\n")
 # can add numpy arrays if they have the same shape(dimensions)
 b = b+a
 print(b,end="\n\n")
+
+#some universal numpy functions
+
+a = np.arange(6).reshape(2,3)
+b = np.arange(4).reshape(2,2)
+
+print(a,end="\n\n")
+print(b,end="\n\n")
+
+#concatinates arrays horizontally
+#no of rows has to be same
+c = np.hstack((a,b))
+print(c,end="\n\n")
+
+#concatinates arrays vertically
+# no of columns has to be same
+a= a.reshape(3,2)
+c = np.vstack((a,b))
+print(c,end="\n\n")
+
+#sort 
+a.sort(axis=0)
+print(a)
