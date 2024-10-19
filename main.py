@@ -104,3 +104,35 @@ a.sort(axis=0) #sorts all columns
 print(a,end="\n\n")
 a.sort(axis=1) #sorts all rows
 print(a,end="\n\n") 
+
+
+
+# a[index_array]
+
+a = np.random.randint(0,10,20)
+b = a[[1,2,3]]
+print(a,end="\n\n")
+print(b,end="\n\n")
+
+# a[boolean_mask]
+# returns all the elements that correspond to the True boolean value
+a = np.random.randint(0,10,8)
+print(a,end="\n\n")
+print(a[[True,True,False,False,False,False,False,False]],end="\n\n")
+
+# a[boolean_expression]
+
+a = np.round(np.random.rand(20)*100)
+print(a,end="\n\n")
+
+#prints all elements less than 50
+print(a[a<50],end="\n\n")
+
+# prints all values where this both are true
+print(a[(a<80) | (a>50)],end="\n\n")
+
+
+#prints all values where elements are not greater than 80
+print(a[~(a>80)])
+
+# &, | and ~ are bitwise operators
